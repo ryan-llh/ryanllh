@@ -1,0 +1,496 @@
+
+.backimage{
+	width:100%;
+	height:140%;
+	background-image:url("dark.png");
+	background-size:100% 100%;
+	z-index:-3;
+	animation:slide 10s infinite linear;
+	
+}
+
+@keyframes slide{
+	25% {background-image:url("louvre.png");}
+	50% {background-image:url("adt.png");}
+	75% {background-image:url("olympics.png");}
+	100%{background-image:url("dark.png");}
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.logotext{
+	background-image:url("hotel.gif");
+	background-size:cover;
+	background-clip:text;
+	-webkit-background-clip:text;
+	color:transparent;
+	font-size:90px;
+	font-weight:10000;
+	z-index:1;
+}
+nav li{
+  list-style:none;
+}
+
+.navbar{
+	width:100%;
+	position:absolute;
+	top:10px;
+	left:0;
+	display:flex;
+	align-items: center;
+	justify-content:space-between;
+	padding:20px;
+	height:45px;
+	z-index:1;
+}
+nav img{
+	position:relative;
+	top:85px;
+	left:0;
+}
+.nav-links a{
+	position:relative;
+	justify-content:end;
+	color:white;
+	text-decoration:none;
+	display:inline-block;
+	font-weight:600;
+}
+
+/* Navbar menu*/
+.menu{
+  display:flex;
+  gap:1em;
+  font-size:18px;
+  
+}
+
+.menu li:hover{
+  background-color:rgba(255, 255, 255, 0.4);
+  border-radius:50px;
+  transition:0.3s ease;
+}
+.menu li{
+  padding:0px 14px;
+}
+
+/*Responsive NAVBAR MENU starts*/
+/*Checkbox hack*/
+input[type=checkbox]{
+  display:none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger{
+  display:none;
+  font-size:24px;
+  user-select:none;
+}
+
+/*APPLYING MEDIA QUERIES*/
+@media (max-width:1250px){
+    .menu{
+      display:none;
+      position:absolute;
+      background-color:rgba(255, 255, 255, 0.3);
+      right:0;
+      left:0;
+      text-align:center;
+      padding:16px 0;
+    }
+  .menu li:hover{
+    display:inline-block;
+    background-color:rgba(255, 255, 255, 0.6);
+    transition:0.2s ease;
+  }
+  .menu li+li{
+    margin-top:15px;
+  }
+  input[type=checkbox]:checked ~ .menu{
+    display:block;
+  }
+  .hamburger{
+    display:block;
+	color:yellow;
+  }
+}
+#description{
+	position:relative;
+	top:25%;
+	font-weight:500;
+	z-index:3;
+	color:yellow;
+}
+.maintext{
+	font-family:'Montserrat', sans-serif;
+	font-size:30px;
+	font-weight:900;
+}
+
+#servicetext{
+	position:absolute;
+	top:142%;
+	left:27%;
+	font-weight:500;
+	font-size:90px;
+	color:red;
+/*	width:100%;*/
+/*	height:20%;*/
+	z-index:3;
+
+}
+.services{
+/*	height:220%;	*/
+	height:110%;
+	background-image:url('room.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	animation:bgslide 10s infinite linear;
+	display:flex;
+
+	flex-wrap:wrap;
+	/*align-items:center;*/
+	justify-content:space-evenly;
+	overflow:hidden; /* i added this*/
+}
+@keyframes bgslide{
+	33% {background-image:url("museum.png");}
+	66% {background-image:url("crowd.png");}
+	100%{background-image:url("room.png");}
+}
+.hotels-link,.entertainment-link,.competition-link{
+	text-decoration: none;
+}
+
+
+.hotels,.entertainment,.competition{
+	position:relative;
+	width:400px;
+	height:400px;
+	/*border: 2px solid black;*/
+/*	flex-grow:1;
+	flex-basis:400px;*/	
+	box-sizing:border-box;
+	border-radius:50px;
+	margin-top:40%;
+	/*padding:0px;*/
+	background-repeat: no repeat;
+	background-size:cover;
+	transition:.3s;
+}
+
+.hotels{
+	background-image:url("hotel.png");
+/*	margin-left:5%;*/
+}
+
+.entertainment{
+	background-image:url("entertainment.png");
+/*	margin-left:15%;*/
+}
+
+.competition{
+	
+	background-image:url("competition.png");	
+	/*margin-left:25%;*/
+}
+
+.hoteltext,.entertainmenttext,.competitiontext{
+	position:relative;
+	top:30px;
+	text-align:center;
+	height:70px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:35px;
+	background-color: rgba(255, 255, 255, 0.5);
+	color:black;
+	border-radius:10px;
+}
+
+@media (max-width:1225px ) {
+	.services{
+		height:280%;
+	}
+	#servicetext{
+		left:0;
+		font-size:65px;
+	}
+}
+.services:hover > :not(:hover){
+	opacity: .5;
+}
+#itinerarybg{
+	background-image:url("itinerary.jpg.jpg");
+	width:100%;
+	height:600%;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+@media (max-width:1360px ){
+	#itinerarybg{height:1100%;}
+	
+}
+#itinerarytext{
+	position:relative;
+	color:yellow;
+	top:2%;
+	font-size:40px;
+	font-weight:200;
+}
+#morningimg,#lunchimg,#eveningimg,#nightimg{
+	
+	background-size:cover;
+	
+	border-radius:15px;
+	width:70%;
+	height:10%;
+	margin:auto;
+	position:relative;
+}
+#morningimg{
+	background-image:url("summer.png");
+	background-position:center;
+	animation:morningslide 8s infinite linear;
+}
+@keyframes morningslide{
+	50%{background-image:url("morninglouvre.png");}
+	100%{background-image:url("summer.png");}
+}
+#lunchimg{
+	background-image:url("bistro.jpg");
+	background-position:center top;
+	animation:lunchslide 8s infinite linear;
+}
+@keyframes lunchslide{
+	50%{background-image:url("montmartre.jpg");
+		background-position:center bottom;
+		}
+	100%{background-image:url("bistro.jpg");}
+}
+#eveningimg{
+	background-image:url("ocrowd.jpg");
+	background-position:center;
+	animation:eveningslide 8s infinite linear;
+}
+@keyframes eveningslide{
+	50%{background-image:url("ocrowd2.jpg");}
+	100%{background-image:url("ocrowd.jpg");}
+}
+
+#nightimg{
+	background-image:url("cruise1.jpg");
+	background-position:center bottom;
+	animation:nightslide 8s infinite linear;
+}
+@keyframes nightslide{
+	50%{background-image:url("cruise2.jpg");}
+	100%{background-image:url("cruise1.jpg");}
+}
+
+
+/* hotels.html */
+
+#pool{
+	width:100%;
+	height:160%;
+	background-image:url("pool1.jpg");
+	background-size:100% 100%;
+	
+
+}
+/*
+#hotelmtext{
+	background: rgb(34,96,139);
+	background: linear-gradient(90deg, rgba(34,96,139,0.9920343137254902) 100%, rgba(0,212,255,1) 100%);
+	width:50%;
+}
+*/
+
+#hoteldescription{
+	position:relative;
+	top:0;
+	font-weight:900;
+	height:100%;
+	z-index:0;
+	color:white;
+	/*background: rgb(34,96,139);
+	background: linear-gradient(90deg, rgba(34,96,139,0.9920343137254902) 100%, rgba(0,212,255,1) 100%);*/
+	/*background-color:pink;*/
+	background:url('trybg2.jpg');
+	width:50%;
+
+}/*
+@media (max-width:770px ){
+	#pool{height:160%;}
+	
+} 
+*/
+#hotelchoice{
+	width:100%;
+	height:210%;
+	background-image:url("bg2.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+
+	
+}
+.hotellink{
+	text-decoration:none;
+	color:black;
+}
+#hotel1{
+	width:80%;
+	height:40%;
+	margin:auto;
+	border-radius:15px;
+	border:1px solid white;
+	display:flex;
+	flex-wrap:wrap;
+	background-color:lightgrey;
+	gap:10px;
+	margin-bottom:25px;
+}
+#hotel1img{
+	width:40%;
+	height:100%;
+	border-radius:15px;
+	background-image:url("hotel1.jpg");
+	background-size:cover;
+	background-position:center bottom;
+	
+}
+#hotel2{
+	width:80%;
+	height:40%;
+	margin:auto;
+	border-radius:15px;
+	border:1px solid white;
+	display:flex;
+	flex-wrap:wrap;
+	background-color:lightgrey;
+	gap:10px;
+}
+#hotel2img{
+	width:40%;
+	height:100%;
+	border-radius:15px;
+	background-image:url("hotel2.jpg");
+	background-size:cover;
+	background-position:center bottom;
+	
+}
+
+/* entertainment.html*/
+
+#concert{
+	width:100%;
+	height:170%;
+	background-image:url("concert2.jpg");
+	background-position:center bottom;
+	
+}
+#event1{
+	background-image:url("girl.jpg");
+	background-position:center;
+	background-size:cover;
+	width:100%;
+	height:140%;
+}
+#event2{
+	background-image:url("seine.jpg");
+	background-position:center;
+	background-size:cover;
+	width:100%;
+	height:140%;	
+	z-index:-1;
+}
+
+/*competition.html*/
+
+#compbg{
+	background-image:url('compbg.jpg');
+	width:100%;
+	height:110%;
+	background-size:cover;
+
+}
+#compdescription{
+	color:white;
+	position:relative;
+	top:0;
+	background:url('trybg3.jpg');
+	width:50%;
+	height:100%;
+}
+.complink{
+	text-decoration:none;
+	}
+.list{
+	width:100%;
+	height:180%;
+	background-repeat:no repeat;
+	background-size:cover;
+	
+}
+#list1{
+	background-image:url("judo.jpg");
+	
+}
+#list2{
+	background-image:url("stade.jpg");
+}
+
+.compevent{
+	width:95%;
+	height:50%;
+	margin:auto;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.complist1,.complist2,.complist3{
+	width:30%;
+	height:100%;
+	background-repeat:no repeat;
+	background-size:cover;
+	border-radius:15px;
+}
+#judo{
+	background-image:url("judo1.jpg");
+	
+}
+#swim{
+	background-image:url("swim.jpg");
+	background-position:right;
+}	
+#lift{
+	background-image:url("wl.jpg");
+	background-position:center;
+}
+#foot{
+	background-image:url("foot.jpg");
+}
+#rugby{
+	background-image:url("rugby.jpg");
+	background-position:center;
+}
+#basket{
+	background-image:url("basket.jpg");
+}
+.comptext{
+	position:relative;
+	top:10%;
+	width:100%;
+	height:10%;
+	background-color:rgba(0, 0, 0, 0.5);
+	color:red;
+	font-size:40px;
+	text-align:center;
+}
