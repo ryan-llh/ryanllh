@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "mystyle.css">
+    <title>REGISTER </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+			background-image: url('subg.jpg');
+			background-size:cover;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body >
+<header>
+
+<center>
+ <nav class="navbar">
+    
+	<div class="logotext"><strong>SOUV<strong></div>
+        <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="hotels.html">HOTELS</a></li>
+        <li><a href="entertainment.html">ENTERTAINMENT</a></li>
+        <li><a href="competition.html">COMPETITION</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="signup.html">REGISTER</a></li>
+      </div>
+    </ul>
+    </nav>     
+</center>
+</header>
+<br><br><br><br><br><br><br>
+    <form> 
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
