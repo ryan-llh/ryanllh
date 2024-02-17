@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>	CONTACT</title>
+<link rel = "stylesheet" href = "mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+
+<center>
+ <nav class="navbar">
+    
+	<div class="logotext"><strong>SOUV<strong></div>
+        <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="hotels.html">HOTELS</a></li>
+        <li><a href="entertainment.html">ENTERTAINMENT</a></li>
+        <li><a href="competition.html">COMPETITION</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="signup.html">REGISTER</a></li>
+      </div>
+    </ul>
+    </nav>     
+</center>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: teal;
+    }
+
+	h1{
+	color:white;
+	}
+	
+	label{
+	color:white;
+	}
+	
+	input,textarea{
+	width:30%;
+	height:10%;
+	}
+	
+	textarea{
+		height:20%;
+	}
+    button {
+		background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<br><br><br><br><br>
+	
+  <header>
+    <h1>Send Us Your Message</h1>
+  </header>
+
+ <center>
+    <form >
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="enter your name" required><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="enter your email" required><br>
+
+      <label for="message">Message:</label> <br>
+      <textarea id="message" name="message" rows="4" placeholder="enter your message" required></textarea><br>
+
+      <button type="submit">Send</button>
+    </form>
+</center>
+
+</body>
+</html>
